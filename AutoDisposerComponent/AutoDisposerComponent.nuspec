@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AutoDisposerComponent</id>
+    <version>$version$</version>
+    <authors>kenjiuno</authors>
+    <owners>kenjiuno</owners>
+    <projectUrl>https://github.com/HiraokaHyperTools/AutoDisposerComponent</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Nope.</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>WinForm IDisposable</tags>
+  </metadata>
+</package>
