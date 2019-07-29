@@ -11,15 +11,6 @@ namespace AutoDisposerComponent.Components
         public AutoDisposer()
         {
             InitializeComponent();
-
-            Disposed += (a, b) =>
-            {
-                while (disposables.Count != 0)
-                {
-                    var value = disposables.Pop();
-                    value.Dispose();
-                }
-            };
         }
 
         public AutoDisposer(IContainer container)
@@ -38,6 +29,15 @@ namespace AutoDisposerComponent.Components
                 disposables.Push(value);
             }
             return value;
+        }
+
+        public AutoDisposer AddAnd(IDisposable value)
+        {
+            if (value != null)
+            {
+                disposables.Push(value);
+            }
+            return this;
         }
     }
 }

@@ -18,6 +18,12 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
+
+            while (disposables.Count != 0)
+            {
+                var value = disposables.Pop();
+                value.Dispose();
+            }
         }
 
         #region コンポーネント デザイナーで生成されたコード
